@@ -6,14 +6,15 @@
 
 경마의 베팅과 마피아 게임의 심리전을 결합한 웹 보드게임입니다. 플레이어는 쿠폰으로 경주 결과에 개입하고, 매 라운드 투표로 승부조작 세력을 추리합니다.
 
+최종 업데이트: 2026-06-30
+
 ### 프로젝트 정보
 
 | 항목 | 내용 |
 | --- | --- |
 | 개발 기간 | 2026-06-30 - 진행 중 |
-| 리팩터링 | 기존 서비스와 이름만 공유하는 전면 재기획·재개발 |
 | 인원 | 1인 |
-| 상태 | 플레이 가능한 로컬 프로토타입 개발 중 |
+| 진행 단계 | 플레이 가능한 로컬 프로토타입 개발 중 |
 
 ### 현재 구현
 
@@ -36,6 +37,17 @@
 ### 기술 스택
 
 `React 19` `Vite 8` `Zustand 5` `Framer Motion` `Lucide React`
+
+### 기술 구현 과제
+
+- 5라운드 상태 머신 구성
+- 숨겨진 쿠폰 공개와 레이스 진행 연결
+- AI 베팅과 투표 루프 구성
+- 카드와 레이스 연출을 같은 상태 흐름에서 처리
+
+### 브랜치 및 커밋 정리
+
+- 기능 단위로 커밋을 나누고 있습니다.
 
 ### 실행
 
@@ -62,6 +74,8 @@ npm run dev
 
 COUPONGO is a web board game combining horse-race betting with the social deduction of a mafia game. Players influence a race with hidden coupons and vote on suspected manipulators after each round.
 
+Last updated: 2026-06-30
+
 ### Project
 
 - Development: 2026-06-30 - Present
@@ -77,6 +91,17 @@ COUPONGO is a web board game combining horse-race betting with the social deduct
 - Zustand state management and Framer Motion presentation
 - Local AI play only; network multiplayer is not implemented
 
+### Update Notes
+
+- The README reflects the current design rewrite.
+
+### Update Plan
+
+- Add faction-specific win conditions and final scoring
+- Wire up anonymous-betting and CCTV coupons
+- Apply voting penalties in the next round
+- Keep regression coverage for five-round flow
+
 ### Design Goals
 
 - Mafia players manipulate a designated horse toward a target rank.
@@ -87,6 +112,19 @@ COUPONGO is a web board game combining horse-race betting with the social deduct
 ### Stack and Assets
 
 `React 19` `Vite 8` `Zustand 5` `Framer Motion` `Lucide React`
+
+### Technical Tasks
+
+- Build a five-round state machine
+- Connect hidden coupons to race flow
+- Run AI betting and voting loops
+- Keep card and race presentation in one state flow
+
+### Branch and Commit Notes
+
+- Commits are split by feature scope.
+
+### Assets and Run
 
 - Horse Pack: loota9, CC BY 4.0
 - Noto Serif: SIL Open Font License 1.1
