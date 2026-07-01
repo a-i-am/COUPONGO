@@ -1,25 +1,50 @@
 # COUPONGO
 
-[한국어](#한국어) | [English](#english)
+- 경마 시스템과 마피아 게임의 추리 요소를 결합한 웹 보드게임입니다.
+- 플레이어는 쿠폰을 사용해 경주 결과에 개입하며, 라운드마다 진행되는 투표를 통해 승부조작 세력을 찾아내야 합니다.
 
-## 한국어
+README 업데이트: 2026-07-01
 
-경마의 베팅과 마피아 게임의 심리전을 결합한 웹 보드게임입니다. 플레이어는 쿠폰으로 경주 결과에 개입하고, 매 라운드 투표로 승부조작 세력을 추리합니다.
-
-최종 업데이트: 2026-06-30
+> 📷 **영상 및 이미지**
+> *(여기에 영상 또는 이미지 추가 예정)*
 
 ### 프로젝트 정보
 
 | 항목 | 내용 |
 | --- | --- |
 | 개발 기간 | 2026-06-30 - 진행 중 |
+| 리팩터링 이력 | (진행 시 추가 예정) |
 | 인원 | 1인 |
 | 진행 단계 | 플레이 가능한 로컬 프로토타입 개발 중 |
 
+### 기술 스택
+<p>
+  <img src="https://img.shields.io/badge/React 19-20232A?style=flat-square&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/Vite 8-646CFF?style=flat-square&logo=vite&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Zustand 5-342B24?style=flat-square"/>
+  <img src="https://img.shields.io/badge/Framer Motion-0055FF?style=flat-square&logo=framer&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Lucide React-F28D1A?style=flat-square"/>
+</p>
+
+### 프로젝트 구조
+```text
+(프로젝트 구조도 추가 예정)
+```
+
+### 플레이 및 조작 방법
+*(플레이어 턴 진행, 마우스 조작 등 상세한 플레이 방법 작성 예정)*
+
+### 주요 용어 및 쿠폰 효과
+레이스의 승패와 추리에 개입하기 위해 플레이어가 사용할 수 있는 특수 쿠폰들입니다:
+- **도핑(Doping):** 타겟이 된 말의 이동 속도를 일시적으로 크게 증가시킵니다.
+- **스턴(Stun):** 타겟이 된 말을 일정 시간 동안 멈추게 하여 진행을 방해합니다.
+- **익명 베팅(Anonymous):** 다른 플레이어들에게 자신의 베팅 내역(누가 어떤 말에 돈을 걸었는지)을 숨깁니다.
+- **CCTV:** 의심되는 다른 플레이어가 비공개로 배치한 쿠폰의 내역을 몰래 들여다봅니다.
+
 ### 현재 구현
 
-- 5라운드 게임 상태와 로비·게임오버 흐름
-- 쿠폰 투하, 자동 레이스, 긴급 투표의 3단계 루프
+- 게임 상태와 로비·게임오버 흐름
+- 쿠폰 배치, 자동 레이스, 긴급 투표의 3단계 루프
 - 도핑, 스턴, 익명 베팅, CCTV 쿠폰 데이터
 - AI 플레이어의 쿠폰 사용과 투표
 - Framer Motion 기반 카드·레이스·투표 연출
@@ -32,23 +57,6 @@
 - 쿠폰은 비공개로 배치되고 레이스 시작 시 공개
 - 투표 대상은 탈락하지 않고 다음 라운드 행동 제약을 받음
 
-현재 구현은 로컬 AI 대전입니다. 네트워크 멀티플레이는 구현된 기능으로 표기하지 않습니다.
-
-### 기술 스택
-
-`React 19` `Vite 8` `Zustand 5` `Framer Motion` `Lucide React`
-
-### 기술 구현 과제
-
-- 5라운드 상태 머신 구성
-- 숨겨진 쿠폰 공개와 레이스 진행 연결
-- AI 베팅과 투표 루프 구성
-- 카드와 레이스 연출을 같은 상태 흐름에서 처리
-
-### 브랜치 및 커밋 정리
-
-- 기능 단위로 커밋을 나누고 있습니다.
-
 ### 실행
 
 ```bash
@@ -57,90 +65,10 @@ npm ci
 npm run dev
 ```
 
-### 에셋 출처
-
-- Horse Pack: loota9, CC BY 4.0
-- Noto Serif: SIL Open Font License 1.1
-- 출처와 재배포 조건이 확인되지 않은 원본 에셋은 공개 커밋에서 제외
-
-### 다음 업데이트
+### 업데이트 계획
 
 - 진영별 승리 조건과 최종 정산
-- 익명 베팅과 CCTV 쿠폰의 실제 효과
+- 익명 베팅과 CCTV 쿠폰의 실제 효과 구현
 - 투표 패널티의 다음 라운드 적용
-- 5라운드 완주 회귀 테스트
-
-## English
-
-COUPONGO is a web board game combining horse-race betting with the social deduction of a mafia game. Players influence a race with hidden coupons and vote on suspected manipulators after each round.
-
-Last updated: 2026-06-30
-
-### Project
-
-- Development: 2026-06-30 - Present
-- Team: Solo
-- Status: Local playable prototype in active development
-- This is a complete redesign that only reuses the old project name.
-
-### Current Implementation
-
-- Five-round lobby, gameplay, and game-over state flow
-- Hidden coupon placement, automatic racing, and emergency voting
-- AI coupon use and voting
-- Zustand state management and Framer Motion presentation
-- Local AI play only; network multiplayer is not implemented
-
-### Update Notes
-
-- The README reflects the current design rewrite.
-
-### Update Plan
-
-- Add faction-specific win conditions and final scoring
-- Wire up anonymous-betting and CCTV coupons
-- Apply voting penalties in the next round
-- Keep regression coverage for five-round flow
-
-### Design Goals
-
-- Mafia players manipulate a designated horse toward a target rank.
-- Citizens infer manipulation while trying to make high-odds horses win.
-- Coupons remain hidden until the race begins.
-- Voting restricts a suspect's next-round actions instead of eliminating the player.
-
-### Stack and Assets
-
-`React 19` `Vite 8` `Zustand 5` `Framer Motion` `Lucide React`
-
-### Technical Tasks
-
-- Build a five-round state machine
-- Connect hidden coupons to race flow
-- Run AI betting and voting loops
-- Keep card and race presentation in one state flow
-
-### Branch and Commit Notes
-
-- Commits are split by feature scope.
-
-### Assets and Run
-
-- Horse Pack: loota9, CC BY 4.0
-- Noto Serif: SIL Open Font License 1.1
-- Assets without verified source and redistribution terms are excluded from public commits.
-
-### Run
-
-```bash
-cd frontend
-npm ci
-npm run dev
-```
-
-### Next Updates
-
-- Faction-specific win conditions and final scoring
-- Functional anonymous-betting and CCTV coupons
-- Next-round voting penalties
-- Five-round regression coverage
+- 완주 흐름 회귀 테스트
+- 사용한 에셋 출처 표기 예정
